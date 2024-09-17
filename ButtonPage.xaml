@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ButtonSlider.ButtonPage"
+             Title="Button">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Margin="20">
+            <Label Text="BUTTON" FontSize="Title"
+                   VerticalOptions="Center" FontFamily="Arial Black"
+                   HorizontalOptions="Center" TextColor="#440099"/>
+            <Button x:Name="btnDefault" Text="Default Style" Clicked="ButtonClicked"/>
+
+            <HorizontalStackLayout Spacing="10">
+                <Label WidthRequest="150" MaxLines="4" FontSize="Micro" HeightRequest="60"
+                       VerticalTextAlignment="Center" Text="widthRequest = 125"/>
+                <Button x:Name="button2" Text="button 2" WidthRequest="125" HeightRequest="60"
+                        CornerRadius="25" Clicked="ButtonClicked"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10">
+                <Label WidthRequest="150" MaxLines="5" FontSize="Micro"
+       VerticalTextAlignment="Center" Text="fontSize = Large, CornerRadius = 15, BorderColor = Blue"/>
+                <Button x:Name="button3" Text="button 3" WidthRequest="125" HeightRequest="60"
+                        BackgroundColor="BurlyWood" TextColor="SaddleBrown" CornerRadius="15"
+                        FontSize="Large" BorderColor="Blue" BorderWidth="5" Clicked="ButtonClicked"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10">
+                <Label WidthRequest="150" MaxLines="4" FontSize="Micro" VerticalTextAlignment="Center"
+                       Text="FontSize = 21, CornerRadius = 0, FontFamily = Arial Black"/>
+                <Button x:Name="button4" Text="Button 4" WidthRequest="125" HeightRequest="60"
+                        BackgroundColor="DarkRed" TextColor="Yellow" CornerRadius="0" FontSize="21"
+                        FontFamily="Arial Black" Clicked="ButtonClicked"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10">
+                <Label WidthRequest="150" MaxLines="4" FontSize="Micro" VerticalTextAlignment="Center"
+                       Text="BackgroundClor = Transparent"/>
+                <Button x:Name="button5" Text="Button 5" WidthRequest="125" HeightRequest="60"
+        BackgroundColor="Transparent" TextColor="Red" FontSize="21" Clicked="ButtonClicked"/>
+            </HorizontalStackLayout>
+
+            <Button x:Name="btnSubmit" Text="submit" WidthRequest="100" HeightRequest="35"
+BackgroundColor="CornflowerBlue" TextColor="DarkBlue" FontSize="Medium" BorderColor="DarkBlue"
+                        BorderWidth="3" CornerRadius="15" Clicked="SubmitForm"/>
+
+            <Button x:Name="btnSMCC" BackgroundColor="#cf7f00" TextColor="White"
+                        WidthRequest="180" HeightRequest="50" HorizontalOptions="Center"
+                        Text="South Mountain Community College" LineBreakMode="WordWrap"
+                        FontFamily="Arial" FontAttributes="Bold" FontSize="Default" Clicked="GoSMCC"/>
+
+            <Button x:Name="btnSMCC2" BackgroundColor="#cf7f00" TextColor="White" Rotation="-90"
+        WidthRequest="190" HeightRequest="50" HorizontalOptions="Center" Margin="0, 60, 0, 25"
+        Text="South Mountain Community College" LineBreakMode="WordWrap" Clicked="GoSMCC"
+        FontFamily="Arial" FontAttributes="Bold" FontSize="Default"/>
+
+            <Button x:Name="btnSMCC3" BackgroundColor="#cf7f00" TextColor="White" RotationX="10"
+WidthRequest="210" HeightRequest="50" HorizontalOptions="Center" Margin="0, 35"
+Text="South Mountain Community College" LineBreakMode="WordWrap" Clicked="GoSMCC"
+FontFamily="Arial" FontAttributes="Bold" FontSize="Default" RotationY="-45"/>
+
+            <Button x:Name="btnFlight" Text="Flight" HeightRequest="45" WidthRequest="150"
+                        FontSize="Large" FontFamily="Arial" FontAttributes="Bold"
+                        BackgroundColor="DeepSkyBlue" TextColor="WhiteSmoke"
+                        ImageSource="dotnet_bot.png" ContentLayout="Left, 20" Clicked="GoFlights"/>
+
+            <HorizontalStackLayout Spacing="15" HorizontalOptions="Center">
+                <Button x:Name="btnSubmit2" BackgroundColor="Red" Text="submit" FontFamily="Arial Bold"
+                        TextColor="White" FontSize="14" HeightRequest="80" WidthRequest="80"
+                        CornerRadius="40" BorderColor="Black" BorderWidth="2"/>
+
+                <Button x:Name="btnFlight2" BackgroundColor="DeepSkyBlue" ImageSource="dotnet_bot.png"
+                        HeightRequest="80" WidthRequest="80" CornerRadius="40" BorderColor="Black"
+                        BorderWidth="2"/>
+
+                <Button x:Name="btnFlight3" BackgroundColor="Transparent" ImageSource="dotnet_bot.png"
+                        HeightRequest="80" WidthRequest="100"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

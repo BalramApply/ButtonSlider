@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ButtonSlider.SliderPage"
+             Title="Slider">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Margin="20">
+            <Label
+                Text="SLIDER" FontSize="Title"
+                VerticalOptions="Center" FontFamily="Arial Black"
+                HorizontalOptions="Center" TextColor="#440099"/>
+
+            <VerticalStackLayout HorizontalOptions="Center">
+                <Slider x:Name="mySlider100" Minimum="0" Maximum="100"
+                        ValueChanged="mySlider100Changed"/>
+                <Label x:Name="lblSlider100Value" FontSize="Default"
+                       Text="The slide value above is 0 [0 - 100"
+                       TextColor="Black" WidthRequest="300"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout HorizontalOptions="Center">
+                <Slider x:Name="mySlider" BackgroundColor="red"
+                        MinimumTrackColor="Yellow" MaximumTrackColor="DarkRed"
+                        ThumbColor="Lime"/>
+                <Label Text="{Binding Source={x:Reference mySlider}, Path=Value, StringFormat='the slider value is {0:F2} [0.0-1.0'}"
+                       TextColor="Black" WidthRequest="300"/>
+            </VerticalStackLayout>
+
+            <HorizontalStackLayout Spacing="10">
+                <Slider x:Name="sliderPercent" Margin="0, 20, 0, 0"
+                        Minimum="0" Maximum="100" Value="0" HeightRequest="20" WidthRequest="250"
+                        ThumbColor="red" MaximumTrackColor="Gray" MinimumTrackColor="Lime"
+                        ValueChanged="SliderPercentChanged"/>
+                <Label x:Name="lblSliderPercentValue" BackgroundColor="Lime"
+                       FontSize="Medium" Text="0.00%" WidthRequest="75"
+                       HeightRequest="30" VerticalOptions="Center" VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="End"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10">
+                <Slider x:Name="mySliderCat" Margin="0, 20, 0, 0" Minimum="-25" Maximum="25"
+                        HeightRequest="20" WidthRequest="250" ThumbImageSource="letter_red.png"
+                        MaximumTrackColor="Lime" MinimumTrackColor="OrangeRed"
+                        ValueChanged="SliderCatChanged"/>
+                <Label x:Name="lblSliderCatValue" BackgroundColor="Yellow" FontSize="Medium" Text="0"
+                       WidthRequest="75" HeightRequest="30" VerticalOptions="Center"
+                       VerticalTextAlignment="Center" HorizontalTextAlignment="End"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
